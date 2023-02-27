@@ -7,7 +7,9 @@ import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
 
+import 'DetailPage.dart';
 import 'SplashScreen.dart';
+import 'globals.dart';
 
 Future<void> copyDatabase() async {
   // Get the directory for storing the database file
@@ -34,15 +36,17 @@ void main() async {
   String path = join(documentsDirectory.path, 'Animals.db');
   Database database = await openDatabase(path);
 
-  var list = await database.rawQuery('SELECT * FROM animalTable');
+   Global.list = await database.rawQuery('SELECT * FROM animalTable');
 
-  for (var row in list) {
-    print(row);
+  for (var row in Global.list) {
+    // print(row);
+    print(Global.list);
   }
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     routes: {
-      '/': (context) => const MyApp(),
+      '/': (context) =>  const MyApp(),
+      'detail' : (context) =>  Detail_Page(),
     },
   ));
 }

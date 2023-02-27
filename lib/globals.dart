@@ -1,4 +1,6 @@
 import 'dart:collection';
 
-List<Map<String, dynamic>> list = [];
-List<Map<String, dynamic>> uniqueList = [];
+class Global{
+  static List<Map<String, dynamic>> list = [];
+  static List<Map<String, dynamic>> uniqueList = [];
+}
