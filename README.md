@@ -18,6 +18,6 @@ samples, guidance on mobile development, and a full API reference.
 
 
 
-
+This App Data is fetch from API (GET Method ).
 https://user-images.githubusercontent.com/117707568/221622162-2861a42c-7363-458c-b587-e97c9b33910c.mp4
 
